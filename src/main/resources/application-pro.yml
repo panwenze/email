@@ -1,0 +1,30 @@
+server:
+  port: 8085
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    #MySql配置
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/sibo_email?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: email
+    password: email
+
+sibomail:
+  system:
+    host:
+    username:
+    password:
+    port:
+    protocol:
+  service:
+    host:
+    username:
+    password:
+    port:
+    protocol:
+  person:
+    host:
+    username:
+    password:
+    port:
+    protocol:

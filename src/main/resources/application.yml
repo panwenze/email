@@ -1,0 +1,40 @@
+spring:
+  profiles:
+    active: dev
+  mail:
+    default-encoding: UTF-8
+    host: smtp.mxhichina.com
+    username:
+    password:
+    port: 25
+    protocol: smtp
+  properties:
+    mail.smtp.auth: true
+    mail.smtp.socketFactory.class: javax.net.ssl.SSLSocketFactory
+    mail.smtp.socketFactory.fallback: false
+    mail.smtp.socketFactory.port: 465
+#mybatisplus
+mybatis-plus:
+  mapper-locations: classpath*:mapper/**/*Mapper.xml
+  typeAliasesPackage: com.sibo.email.domain
+  global-config:
+    id-type: 0
+    field-strategy: 2
+    db-column-underline: true
+    refresh-mapper: true
+    #capital-mode: true
+    #key-generator: com.baomidou.mybatisplus.incrementer.OracleKeyGenerator
+    logic-delete-value: -1
+    logic-not-delete-value: 0
+    #meta-object-handler: com.baomidou.springboot.xxx
+    sql-injector: com.baomidou.mybatisplus.mapper.LogicSqlInjector
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    call-setters-on-nulls: true
+# PageHelper
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
