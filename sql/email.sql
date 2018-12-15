@@ -1,3 +1,6 @@
+
+CREATE SCHEMA `db_email` DEFAULT CHARACTER SET utf8 ;
+
 CREATE TABLE `t_email` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `host` varchar(45) DEFAULT NULL COMMENT '服务器地址',
